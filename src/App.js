@@ -23,18 +23,18 @@ const App = () => {
   })
 
   return (
-    <div className="App">
+    <div className="App ui container">
       <h1>Risk of Rain 2 Character Builder</h1>
       <p>Your current survivor is {selectedSurvivor.name || 'unselected'} </p>
       <p>To get started, choose a survivor below.</p>
-      <ul>
+      <div className="ui six column grid">
         {survivors.map(survivor => <Survivor key={survivor.id} survivor={survivor} handleClick={handleClickSurvivor} />)}
-      </ul>
+      </div>
       <hr />
       <InputWithLabel id='search' label='Search' value={searchTerm} onInputChange={handleSearch} />
-      <ol>
+      <div className="ui three column grid">
         <ItemsList items={filteredItems} />
-      </ol>
+      </div>
     </div>
   );
 }
