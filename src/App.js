@@ -1,18 +1,16 @@
 import React from 'react';
+
+// custom components
 import Survivor from './components/Survivor'
+import Search from './components/Search'
+
+// data
 import survivors from './data/survivors'
 import items from './data/items'
 
 const ItemsList = ({ items }) => (
   items.map(item => <li>{item.name}: {item.shortDescription}</li>)
 )
-
-const Search = ({ onSearch, searchTerm }) => (
-  <div>
-    <label htmlFor="search">Search: </label>
-    <input id="search" type="text" onChange={onSearch} value={searchTerm} />
-  </div>
-);
 
 const App = () => {
   const [selectedSurvivor, setSelectedSurvivor] = React.useState('')
