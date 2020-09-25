@@ -2,15 +2,12 @@ import React from 'react';
 
 // custom components
 import Survivor from './components/Survivor'
-import Search from './components/Search'
+import ItemsList from './components/ItemsList'
+import InputWithLabel from './components/InputWithLabel'
 
 // data
 import survivors from './data/survivors'
 import items from './data/items'
-
-const ItemsList = ({ items }) => (
-  items.map(item => <li>{item.name}: {item.shortDescription}</li>)
-)
 
 const App = () => {
   const [selectedSurvivor, setSelectedSurvivor] = React.useState('')
@@ -34,7 +31,7 @@ const App = () => {
         {survivors.map(survivor => <Survivor key={survivor.id} survivor={survivor} handleClick={handleClickSurvivor} />)}
       </ul>
       <hr />
-      <Search onSearch={handleSearch} searchTerm={searchTerm} />
+      <InputWithLabel id='search' label='Search' value={searchTerm} onInputChange={handleSearch} />
       <ol>
         <ItemsList items={filteredItems} />
       </ol>
