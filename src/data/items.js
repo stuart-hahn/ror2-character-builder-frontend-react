@@ -510,7 +510,7 @@ const items = [
   },
   {
     wikiLink: "https://riskofrain2.fandom.com/wiki/Wicked_Ring",
-    name: "H3AD-5T v2",
+    name: "Wicked Ring",
     image: "",
     shortDescription: "Gain 5% critical chance. Critical strikes reduces all your cooldowns by 1.",
     description: "",
