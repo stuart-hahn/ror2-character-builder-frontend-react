@@ -4,7 +4,7 @@ import survivors from './data/survivors'
 import items from './data/items'
 
 const ItemsList = ({ items }) => (
-  items.map(item => <li>{item.name}</li>)
+  items.map(item => <li>{item.name}: {item.shortDescription}</li>)
 )
 
 const Search = ({ onSearch, searchTerm }) => (
@@ -23,7 +23,8 @@ const App = () => {
 
   const filteredItems = items.filter(item => {
     return item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.shortDescription.toLowerCase().includes(searchTerm.toLowerCase())
+      item.shortDescription.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.category.some(category => category.toLowerCase().includes(searchTerm.toLowerCase()))
   })
 
   return (
