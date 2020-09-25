@@ -509,20 +509,6 @@ const items = [
     }],
   },
   {
-    wikiLink: "https://riskofrain2.fandom.com/wiki/Wicked_Ring",
-    name: "Wicked Ring",
-    image: "",
-    shortDescription: "Gain 5% critical chance. Critical strikes reduces all your cooldowns by 1.",
-    description: "",
-    itemRarity: "LEGENDARY",
-    tag: [
-      "UTILITY",
-    ],
-    category: [],
-    id: 23,
-    hidden: true,
-  },
-  {
     wikiLink: "https://riskofrain2.gamepedia.com/Warbanner",
     name: "Warbanner",
     image: "https://gamepedia.cursecdn.com/riskofrain2_gamepedia_en/f/f0/Warbanner.png",

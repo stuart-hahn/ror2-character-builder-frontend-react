@@ -1,7 +1,8 @@
 import React from 'react';
+import Item from './Item'
 
 const ItemsList = ({ items }) => (
-  items.map(item => <li>{item.name}: {item.shortDescription}</li>)
+  items.map(item => <Item item={item} />)
 )
 
 export default ItemsList;

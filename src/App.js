@@ -31,8 +31,10 @@ const App = () => {
         {survivors.map(survivor => <Survivor key={survivor.id} survivor={survivor} handleClick={handleClickSurvivor} />)}
       </div>
       <hr />
-      <InputWithLabel id='search' label='Search' value={searchTerm} onInputChange={handleSearch} />
-      <div className="ui three column grid">
+      <div className="ui search">
+        <InputWithLabel id='search' label='Search' value={searchTerm} onInputChange={handleSearch} />
+      </div>
+      <div className="ui relaxed divided list">
         <ItemsList items={filteredItems} />
       </div>
     </div>
